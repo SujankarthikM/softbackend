@@ -6,5 +6,5 @@ pandas
 numpy
 tensorflow
 joblib
-sklearn
+scikit-learn
 gunicorn
