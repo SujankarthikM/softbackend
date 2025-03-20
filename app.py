@@ -10,6 +10,10 @@ from datetime import datetime, timedelta
 from tensorflow.keras.losses import MeanSquaredError
 from tensorflow.keras.utils import CustomObjectScope
 import os
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"  # Force CPU-only mode
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"  # Suppress unnecessary TensorFlow warnings
+
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 app = Flask(__name__)
 CORS(app)  # Enable CORS for frontend integration
